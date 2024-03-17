@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XOX Web Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>XOX Web Game</h1>
+    
+    <div id="game-board">
+      <div style="border-top-left-radius: 10px;" class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div style="border-top-right-radius: 10px;" class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+    </div>
+    
+    <div class="game_score_message">
+      <h3>X: 0</h3>
+      <h3></h3>
+      <h3>O: 0</h3>
+    </div>
+
+    <div id="message" class="hidden">
+      <button id="restart-button">Try again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
