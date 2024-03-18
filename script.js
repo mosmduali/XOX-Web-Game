@@ -22,6 +22,11 @@ const WINNING_COMBOS = [
   [2, 4, 6],
 ];
 
+// Sağ tıklama olayını engelle
+window.addEventListener('contextmenu', function (e) {
+  e.preventDefault(); 
+});
+
 // Kutucuklara tetiklenme ayarı verir
 cells.forEach(cell => {
   cell.addEventListener('click', handleClick, { once: true });
@@ -55,7 +60,14 @@ function handleClick(e) {
 }
 // Gönderiler sembolü yerleştirmek için kullanılır
 function placeMark(cell, currentClass) {
+  
   cell.textContent = currentClass;
+  if(cell.textContent === "X"){
+    cell.style.textShadow = "0px 0px 5px red";
+  }else{
+    cell.style.textShadow = "0px 0px 5px green";
+  }
+  
 }
 // sıradaki oyuncuyu belirler
 function swapTurns() {
@@ -80,9 +92,8 @@ function isWinner(){
   score()
   if(player_X === 3){
     h2Elements[0].textContent = "";
-    h2Elements[1].textContent = "X, " + player_X + "-" + player_O + " Win!";
+    h2Elements[1].textContent = "X, wins " + player_X + "-" + player_O + "!";
     h2Elements[2].textContent = "";
-    h2Elements[1].style.color = "red";
 
     player_X = 0;
     player_O = 0;
@@ -90,9 +101,8 @@ function isWinner(){
   }
   if(player_O === 3){
     h2Elements[0].textContent = "";
-    h2Elements[1].textContent = "O, " + player_O + "-" + player_X + " Win!";
+    h2Elements[1].textContent = "O, wins " + player_O + "-" + player_X + "!";
     h2Elements[2].textContent = "";
-    h2Elements[1].style.color = "red";
 
     player_X = 0;
     player_O = 0;
