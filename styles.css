@@ -32,7 +32,6 @@ h1 {
   border: 2px solid #333;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  box-shadow: 0px -2px 10px 0px red;
   margin-bottom: 5px;
   
 }
@@ -45,8 +44,19 @@ h1 {
   border: 2px solid #333;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  box-shadow: 0px 2px 10px 0px green;
 }
+#gsm{
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  letter-spacing: 2px;
+  width: 300px;
+  margin: 0 auto;
+  border: 2px solid #333;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/*
 .game_score_message:hover{
   box-shadow: 0px 2px 10px 0px red;
   transition: color 0.3s;
@@ -54,13 +64,20 @@ h1 {
 #game-board:hover{
   box-shadow: 0px -2px 10px 0px green;
   transition: color 0.3s;
-}
+}*/
 .game_score_message h3:first-child{
   color: red
 }
 .game_score_message h3:last-child{
   color: green
 }
+#gsm h3:first-child{
+  color: red
+}
+#gsm h3:last-child{
+  color: green
+}
+
 .cell {
   width: 100px;
   height: 100px;
