@@ -45,36 +45,10 @@ h1 {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-#gsm{
-  display: grid;
-  grid-template-columns: 0.5fr 1fr 0.5fr;
-  letter-spacing: 2px;
-  width: 300px;
-  margin: 0 auto;
-  border: 2px solid #333;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-/*
-.game_score_message:hover{
-  box-shadow: 0px 2px 10px 0px red;
-  transition: color 0.3s;
-}
-#game-board:hover{
-  box-shadow: 0px -2px 10px 0px green;
-  transition: color 0.3s;
-}*/
 .game_score_message h3:first-child{
   color: red
 }
 .game_score_message h3:last-child{
-  color: green
-}
-#gsm h3:first-child{
-  color: red
-}
-#gsm h3:last-child{
   color: green
 }
 
@@ -103,6 +77,7 @@ h1 {
 }
 
 #restart-button {
+  
   padding: 10px 20px;
   font-size: 1em;
   background-color: #333;
